@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>963</width>
+    <height>808</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>775</width>
+    <height>400</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Tool - Thủy vân ảnh  - DCT</string>
+  </property>
+  <property name="statusTip">
+   <string/>
+  </property>
+  <property name="whatsThis">
+   <string/>
+  </property>
+  <property name="accessibleDescription">
+   <string/>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color:rgb(250, 250, 250);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="lb_original">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>160</y>
+      <width>280</width>
+      <height>200</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: 5px inset #FFD700;
+border-radius:15px;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lb_mark">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>450</y>
+      <width>280</width>
+      <height>200</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: 5px inset #008EFF;
+border-radius:15px;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_image_ori">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>110</y>
+      <width>220</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#btn_image_ori
+{
+	background:linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
+	background-color:#ffec64;
+	border-radius:6px;
+	border:1px solid #ffaa22;
+	color:#333333;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+}
+#btn_image_ori:pressed 
+{
+	background:linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
+	background-color:#ffab23;
+	font-size:12px;
+}</string>
+    </property>
+    <property name="text">
+     <string>Chọn hình gốc</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_image_mark">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>390</y>
+      <width>220</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="toolTip">
+     <string/>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#btn_image_mark
+{	
+	background:linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
+	background-color:#599bb3;
+	border-radius:8px;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+}
+#btn_image_mark:pressed
+{
+	background:linear-gradient(to bottom, #0c6470 5%, #599bb3 100%);
+	background-color:#0c6470;
+	font-size:12px;
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Chọn hình nhúng</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_embedding">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>390</y>
+      <width>80</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#btn_embedding
+{
+	background-color: #555555;
+  	color: white;
+	border: 2px solid #000000;
+ 	 font-size:15px;
+}
+#btn_embedding:pressed
+{
+	background-color: white;
+	color: black;
+	border: 2px solid #555555;
+	font-size:12px;
+}</string>
+    </property>
+    <property name="text">
+     <string>Nhúng</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_exacting">
+    <property name="geometry">
+     <rect>
+      <x>790</x>
+      <y>390</y>
+      <width>80</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#btn_exacting
+{
+  background-color: #ff3300;
+  color: black;
+  border: 2px solid #555555;
+  font-size:15px;
+}
+#btn_exacting:pressed
+{
+	background-color: #cc0000;
+  	color: white;
+	font-size:12px;
+}</string>
+    </property>
+    <property name="text">
+     <string>Tách</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>40</y>
+      <width>371</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>20</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(0, 0, 255);
+border: 5px double #1C6EA4;</string>
+    </property>
+    <property name="text">
+     <string>Thủy vân ảnh Dùng DCT</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>211</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>10</pointsize>
+      <italic>true</italic>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>WhatsThisCursor</cursorShape>
+    </property>
+    <property name="toolTip">
+     <string>Lê Trường Giang 
+ https://github.com/TrG-1999</string>
+    </property>
+    <property name="statusTip">
+     <string>https://github.com/TrG-1999/programming/tree/master/ProgamDemo/DemoPython/Watermark_With_DWT</string>
+    </property>
+    <property name="whatsThis">
+     <string/>
+    </property>
+    <property name="accessibleName">
+     <string/>
+    </property>
+    <property name="accessibleDescription">
+     <string/>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 0, 0);</string>
+    </property>
+    <property name="text">
+     <string>Trần Đặng Vũ - n17dcat079</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lb_watermark">
+    <property name="geometry">
+     <rect>
+      <x>590</x>
+      <y>160</y>
+      <width>281</width>
+      <height>201</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#lb_watermark
+{
+	
+	background-color: rgb(245, 245, 245);
+	border: 3px dashed #134D72;
+	border-top: none;
+	border-radius:11px;
+	border-bottom: none;
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+    <property name="textInteractionFlags">
+     <set>Qt::LinksAccessibleByMouse</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_save">
+    <property name="geometry">
+     <rect>
+      <x>590</x>
+      <y>380</y>
+      <width>111</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>10</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#btn_save
+{
+	background-color: white; 
+  	color: black; 
+ 	border: 2px solid #008CBA;
+	border-radius:6px;
+}
+#btn_save:pressed
+{
+	background-color: #008CBA;
+	color: white;
+}</string>
+    </property>
+    <property name="text">
+     <string>Lưu Hình 
+ Đã thực hiện</string>
+    </property>
+    <property name="shortcut">
+     <string>Ctrl+S</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lb_noti1">
+    <property name="geometry">
+     <rect>
+      <x>590</x>
+      <y>110</y>
+      <width>291</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <underline>true</underline>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#lb_noti1
+{
+	color: rgb(221, 0, 0);
+}</string>
+    </property>
+    <property name="text">
+     <string>Hình sau khi thực hiện thao tác nhúng</string>
+    </property>
+    <property name="textInteractionFlags">
+     <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lb_watermark_2">
+    <property name="geometry">
+     <rect>
+      <x>590</x>
+      <y>460</y>
+      <width>281</width>
+      <height>201</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#lb_watermark_2
+{
+	
+	background-color: rgb(245, 245, 245);
+	border: 3px dashed #134D72;
+	border-top: none;
+	border-radius:11px;
+	border-bottom: none;
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+    <property name="textInteractionFlags">
+     <set>Qt::LinksAccessibleByMouse</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lb_noti1_2">
+    <property name="geometry">
+     <rect>
+      <x>600</x>
+      <y>680</y>
+      <width>291</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <underline>true</underline>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#lb_noti1_2
+{
+	color: rgb(221, 0, 0);
+}</string>
+    </property>
+    <property name="text">
+     <string>Hình sau khi thực hiện thao tác tách</string>
+    </property>
+    <property name="textInteractionFlags">
+     <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse</set>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
