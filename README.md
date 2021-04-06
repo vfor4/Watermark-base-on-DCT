@@ -12,4 +12,4 @@
 ![image](https://user-images.githubusercontent.com/43163638/113407331-40d6c200-93d7-11eb-977e-47643011ad63.png)
 
 Quá trình thuỷ vân dựa vào DCT, trong đó:
-- Thuật toán thuỷ vân làm theo tác giả chris Shoemarker
+- Thuật toán thuỷ vân làm theo tác giả Chris Shoemarker
