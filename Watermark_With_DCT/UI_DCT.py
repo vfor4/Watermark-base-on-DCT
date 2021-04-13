@@ -4,8 +4,6 @@ from PyQt5.QtWidgets import QMessageBox,QFileDialog
 from PIL import ImageQt
 from PIL import Image as imagePIL
 from App import *
-#https://github.com/TrG-1999/programming/tree/master/ProgamDemo/DemoPython/Watermark_With_DWT
-##Open file
 def browseImage(ob_lb_image):
 	fname = QFileDialog.getOpenFileName(ui,"Opent File image","../Watermark_With_DWT/pyqt5","Image files (*.jpg)")
 	imagePath = fname[0]
